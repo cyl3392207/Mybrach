@@ -5,6 +5,9 @@ class User(models.Model):
     username = models.CharField(max_length=40, unique=True)
     password = models.CharField(max_length=40)
 
+    def __unicode__(self):
+        return '%s[%s]' % (self.username, self.email)
+
 class UserProfile(models.Model):
     image = models.ImageField(upload_to='profile_image')
     full_name = models.CharField(max_length=40, default=u'')
@@ -12,4 +15,5 @@ class UserProfile(models.Model):
     website = models.URLField(blank=True, null=True)
     description = models.TextField(default=u'')
 
-
+    def __unicode__(self):
+        return '%s' % self.full_name
