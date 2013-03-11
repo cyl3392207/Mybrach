@@ -6,7 +6,7 @@ class User(models.Model):
     password = models.CharField(max_length=40)
 
 class UserProfile(models.Model):
-    image = models.ImageField()
+    image = models.ImageField(upload_to='profile_image')
     full_name = models.CharField(max_length=40, default=u'')
     location = models.CharField(max_length=140, default=u'')
     website = models.URLField(blank=True, null=True)

@@ -9,7 +9,7 @@ class Product(models.Model):
     title = models.CharField(max_length=140)
     user = models.ForeignKey(User)
     url = models.URLField(unique=True)
-    image = models.ImageField()
+    image = models.URLField()
 
     price = models.CharField(max_length=40, blank=True, null=True)
     buy_link = models.URLField(blank=True, null=True)

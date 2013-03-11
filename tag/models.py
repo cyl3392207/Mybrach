@@ -15,7 +15,7 @@ class ProductTag(models.Model):
 
 class ProductMention(models.Model):
     time = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='related_productmention_user')
     product = models.ForeignKey(Product)
-    mention = models.ForeignKey(User)
+    mention = models.ForeignKey(User, related_name='related_productmention_mention')
     from_comment = models.ForeignKey(Comment)

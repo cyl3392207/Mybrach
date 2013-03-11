@@ -6,8 +6,8 @@ from collection.models import Collection
 
 class PeopleFollow(models.Model):
     time = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(User)
-    following = models.ForeignKey(User)
+    user = models.ForeignKey(User, related_name='related_peoplefollow_user')
+    following = models.ForeignKey(User, related_name='related_peoplefollow_following')
 
 class StoreFollow(models.Model):
     time = models.DateTimeField(auto_now=True)
