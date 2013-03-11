@@ -1,5 +1,12 @@
+from django.shortcuts import render_to_response
+from django.shortcuts import redirect
+
+
+def index(request):
+    return redirect(trending)
+
 def trending(request):
-    pass
+    return render_to_response('trending.html')
 
 def recent(request):
-    pass
+    return render_to_response('recent.html')

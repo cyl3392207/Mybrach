@@ -9,6 +9,5 @@ urlpatterns = patterns('',
     # url(r'^wanelo/', include('wanelo.foo.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^trending/', 'product.views.trending'),
-    url(r'^recent/', 'product.views.recent'),
+    url(r'^', include('product.urls')),
 )
