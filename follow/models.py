@@ -3,6 +3,7 @@ from django.db import models
 from users.models import User
 from store.models import Store
 from collection.models import Collection
+from tag.models import Tag
 
 class PeopleFollow(models.Model):
     time = models.DateTimeField(auto_now=True)
@@ -18,4 +19,10 @@ class CollectionFollow(models.Model):
     time = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User)
     following = models.ForeignKey(Collection)
+
+class TagFollow(models.Model):
+    time = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User)
+    following = models.ForeignKey(Tag)
+
 
