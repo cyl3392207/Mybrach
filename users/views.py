@@ -10,4 +10,4 @@ def logout(request):
     return redirect(register)
 
 def profile(request):
-    pass
+    return render_to_response('users/profile.html')
