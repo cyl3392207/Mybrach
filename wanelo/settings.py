@@ -113,6 +113,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+LOGIN_URL = '/login'
 AUTH_USER_MODEL = 'users.User'
 AUTHENTICATION_BACKENDS = (
     'users.backends.AuthenticationBackend',

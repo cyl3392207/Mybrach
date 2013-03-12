@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>用户注册</title>
 </head>
 <body>
 
-<form action="" method="POST">
+{{ error }}
 
-
+<form method="post">
+    {% csrf_token %}
+    <p><input name="email" placeholder="邮箱" value="{{ email }}" /></p>
+    <p><input name="username" placeholder="用户名" value="{{ username }}" /></p>
+    <p><input name="password" type="password" placeholder="密码" value="{{ password }}" /></p>
+    <p><input name="next" type="hidden" value="{{ next }}" /></p>
+    <p><input type="submit" value="提交" /></p>
 </form>
 
 </body>

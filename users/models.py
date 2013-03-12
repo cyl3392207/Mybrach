@@ -5,10 +5,16 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class UserManager(BaseUserManager):
     def create_user(self, username, email, password):
-        user = self.model(
-            username = username,
-            email = UserManager.normalize_email(email)
-        )
+        if not username:
+            raise ValueError(u'用户名为空')
+
+        if not email:
+            raise ValueError(u'邮箱为空')
+
+        if not password:
+            raise ValueError(u'密码为空')
+
+        user = self.model(username=username, email=UserManager.normalize_email(email))
         user.set_password(password)
         user.save()
         return user
