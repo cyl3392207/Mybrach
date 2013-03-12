@@ -66,7 +66,8 @@ def logout(request):
 
 @login_required
 def profile(request):
-    return render_to_response('users/profile.html')
+    context = {}
+    return render_to_response('users/profile.html', context, RequestContext(request))
 
 def reset_password(request):
     return HttpResponse(0)
