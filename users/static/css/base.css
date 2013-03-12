@@ -1,0 +1,67 @@
+body    {
+    margin: 0;
+}
+
+a, a:visited   {
+    text-decoration: none;
+    color: #777
+}
+
+ul  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li  {
+    float: left;
+}
+
+.top    {
+    min-height: 40px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.container  {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.float_left {
+    float: left;
+}
+
+.float_right    {
+    float: right;
+}
+
+.logo   {
+    float: left;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.view_modes {
+    float: left;
+    line-height: 40px;
+}
+
+.menu_item  {
+    margin-right: 18px;
+}
+
+.search_box {
+    margin-left: 40px;
+    width: 240px;
+    padding: 6px 10px;
+}
+
+.search_button  {
+    position: relative;
+    left: -25px;
+    top: 2px;
+    color: transparent;
+    border: 0;
+    background: url(http://cdn-assets.wanelo.com/assets/magnifier.png) no-repeat 0 0
+}

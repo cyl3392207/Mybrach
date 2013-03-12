@@ -12,7 +12,8 @@
     <p><input name="credential" placeholder="用户名 / 邮箱" value="{{ credential }}" /></p>
     <p><input name="password" type="password" placeholder="密码" value="{{ password }}" /></p>
     <p><input name="next" type="hidden" value="{{ next }}" /></p>
-    <p><input type="submit" value="提交" /></p>
+    <p><input type="submit" value="登陆" /></p>
+    <p><a href="{% url 'users.views.register' %}?next={{ next }}">注册</a></p>
 </form>
 
 </body>

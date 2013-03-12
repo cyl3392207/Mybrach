@@ -1,11 +1,15 @@
+from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.shortcuts import redirect
 
 def index(request):
     return redirect(list_trending)
 
+def search(request):
+    return render_to_response('search.html', RequestContext(request))
+
 def list_trending(request):
-    return render_to_response('trending.html')
+    return render_to_response('trending.html', RequestContext(request))
 
 def list_recent(request):
     return render_to_response('recent.html')

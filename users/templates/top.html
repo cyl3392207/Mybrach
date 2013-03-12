@@ -1,0 +1,28 @@
+{% load future %}
+
+<div class="top">
+    <div class="container">
+        <div class="float_left">
+            <div class="logo">
+                <a href="{% url 'product.views.index' %}"><img src="http://cdn-assets.wanelo.com/assets/logo120-bb305b89f59d35a66177e31f86806aef.png" /></a>
+            </div>
+            <div class="view_modes">
+                <ul>
+                    <li class="menu_item"><a href="#">最潮</a></li>
+                    {% if user.is_active %}
+                    <li class="menu_item"><a href="#">我的关注</a></li>
+                    {% endif %}
+                    <li class="menu_item">
+                        <form action="{% url 'product.views.search' %}" >
+                            <input class="search_box" name="q" placeholder="商品，店铺，标签，朋友" />
+                            <input class="search_button" type="submit" value="搜索" />
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="float_right">
+            user panel
+        </div>
+    </div>
+</div>

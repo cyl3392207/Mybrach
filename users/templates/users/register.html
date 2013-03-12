@@ -5,6 +5,8 @@
 </head>
 <body>
 
+{% load future %}
+
 {{ error }}
 
 <form method="post">
@@ -13,7 +15,9 @@
     <p><input name="username" placeholder="用户名" value="{{ username }}" /></p>
     <p><input name="password" type="password" placeholder="密码" value="{{ password }}" /></p>
     <p><input name="next" type="hidden" value="{{ next }}" /></p>
-    <p><input type="submit" value="提交" /></p>
+    <p><input type="submit" value="注册" /></p>
+    <p><a href="{% url 'users.views.login' %}?next={{ next }}">登陆</a></p>
+
 </form>
 
 </body>
