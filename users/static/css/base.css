@@ -109,3 +109,14 @@ a:hover, .link_submit:hover {
 .block_submit:hover {
     background: #02affe;
 }
+
+.error  {
+    background: red;
+    margin: 10px auto;
+    padding: 5px;
+    color: white;
+    font-style: italic;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+}
