@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 
 def register(request):
@@ -11,3 +12,12 @@ def logout(request):
 
 def profile(request):
     return render_to_response('users/profile.html')
+
+def reset_password(request):
+    return HttpResponse(0)
+
+def forget_password(request):
+    return HttpResponse(0)
+
+def check(request):
+    return HttpResponse(0)
