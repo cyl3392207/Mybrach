@@ -1,24 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>用户注册</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-{% load future %}
+{% block content %}
 
-{{ error }}
+<h1>用户注册</h1>
 
 <form method="post">
     {% csrf_token %}
-    <p><input name="email" placeholder="邮箱" value="{{ email }}" /></p>
-    <p><input name="username" placeholder="用户名" value="{{ username }}" /></p>
-    <p><input name="password" type="password" placeholder="密码" value="{{ password }}" /></p>
+    <p><input type="text" name="email" placeholder="邮箱" value="{{ email }}" /></p>
+    <p><input type="text" name="username" placeholder="用户名" value="{{ username }}" /></p>
+    <p><input type="password" name="password" placeholder="密码" value="{{ password }}" /></p>
     <p><input name="next" type="hidden" value="{{ next }}" /></p>
-    <p><input type="submit" value="注册" /></p>
-    <p><a href="{% url 'users.views.login' %}?next={{ next }}">登陆</a></p>
-
+    <p><input type="submit" value="注册" class="block_submit" /></p>
 </form>
 
-</body>
-</html>
+<hr />
+
+<p>老用户？<a href="{% url 'users.views.login' %}?next={{ next }}">登陆</a></p>
+
+{% endblock %}
